@@ -1,6 +1,15 @@
 index:
     path: /
+    methods: [GET]
     defaults: { _controller: 'App\Controller\MainPageController::index' }
+login:
+    path: /login
+    methods: [GET]
+    defaults: { _controller: 'App\Controller\AuthController::showLoginPage' }
+login_handler:
+    path: /login
+    methods: [POST]
+    defaults: { _controller: 'App\Controller\AuthController::handleLoginRequest' }
 
 # first, run composer req annotations
 #controllers:
